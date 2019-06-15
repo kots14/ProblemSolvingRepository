@@ -38,47 +38,44 @@ public class W1_5 {
 
 	static class Solver {
 		public void solve( InputReader in, PrintWriter out) {
-				int T = Integer.parseInt(in.readLine());
-				
-				while(T-- > 0) {
-					int N = Integer.parseInt(in.readLine());
-					int[] a = new int[N];
-					String x[] = in.readLine().split(" ");
-					for(int i = 0 ; i < N ; i++) {
-						a[i] = Integer.parseInt(x[i]);
-					}
-					
-					//setting two index pointers for the array
-					
-					int output = Integer.MIN_VALUE;
-					int[] aleft = new int[N];
-					int[] aright = new int[N];
-					
-					aleft[0] = a[0];
-					aright[N - 1] = a[N-1];
-					for(int i = 1; i < N; i++) {
-						aleft[i] = Math.min(aleft[i-1] , a[i]);
-					}
-					for(int i = N - 2; i > -1 ; i--) {
-						aright[i] = Math.max(aright[i + 1] , a[i]);
-					}
-					int left = 0;
-					int right = 0;
-					while(left < N && right < N) {
-						//out.println(right - left);
-						if(aright[right] > aleft[left]) {
-							if(right - left > output)
-								output = right - left;
-							right++;
-						} else
-							left++;						
-					}
-					
-			        out.println(output);
+			int T = Integer.parseInt(in.readLine());
+			
+			while(T-- > 0) {
+				int N = Integer.parseInt(in.readLine());
+				int[] a = new int[N];
+				String x[] = in.readLine().split(" ");
+				for(int i = 0 ; i < N ; i++) {
+					a[i] = Integer.parseInt(x[i]);
 				}
 				
+				//setting two index pointers for the array
 				
-			
+				int output = Integer.MIN_VALUE;
+				int[] aleft = new int[N];
+				int[] aright = new int[N];
+				
+				aleft[0] = a[0];
+				aright[N - 1] = a[N-1];
+				for(int i = 1; i < N; i++) {
+					aleft[i] = Math.min(aleft[i-1] , a[i]);
+				}
+				for(int i = N - 2; i > -1 ; i--) {
+					aright[i] = Math.max(aright[i + 1] , a[i]);
+				}
+				int left = 0;
+				int right = 0;
+				while(left < N && right < N) {
+					//out.println(right - left);
+					if(aright[right] > aleft[left]) {
+						if(right - left > output)
+							output = right - left;
+						right++;
+					} else
+						left++;						
+				}
+				
+				out.println(output);
+			}
 		}
 	}
     static class InputReader {
