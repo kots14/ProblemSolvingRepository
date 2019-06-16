@@ -1,6 +1,26 @@
 import java.io.*;
 import java.util.*;
 
+// 1. Write a recursive program to print reverse nos.
+// 		if n = 5
+// 		print: 5 4 3 2 1
+
+// 2. Write a recursive program to print following pattern
+// 		n = 5
+// 		1 2 3 4 5 5 4 3 2 1
+
+// 3. Write a recursive program to reverse the string
+
+// 4. Write a program to print following pattern
+
+// 		Input: n = 16
+// 		Output: 16, 11, 6, 1, -4, 1, 6, 11, 16
+
+// 		Input: n = 10
+// 		Output: 10, 5, 0, 5, 10
+
+// 5. Check if a number is palindrome or not using recursion
+                                                                                               
 
 
 public class W3_1 {
