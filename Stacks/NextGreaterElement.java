@@ -1,7 +1,27 @@
 import java.io.*;
 import java.util.*;
 
-
+//Problem:
+//--------
+// Check if the given string of brackets is balanced or not
+// Input :
+//--------
+// 23 45 12 11 80
+// 23 80 45 12 11 14
+// Output : 
+//---------
+// 23->45
+// 11->80
+// 12->80
+// 45->80
+// 80->-1
+//
+// 23->80
+// 11->14
+// 12->14
+// 14->-1
+// 45->-1
+// 80->-1
 public class NextGreaterElement {
 
 	public static void main(String[] args) {
