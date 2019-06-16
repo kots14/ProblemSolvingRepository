@@ -7,10 +7,10 @@ public class W3_1 {
 
 	public static void main(String[] args) {
 		try {
-			//InputStream inputStream = new DataInputStream(new FileInputStream("problemsolving\\LinkedList\\io\\W3_1.txt"));
-			//OutputStream outputStream = new DataOutputStream(new FileOutputStream("problemsolving\\LinkedList\\io\\W3_1_out.txt"));
+			//InputStream inputStream = new DataInputStream(new FileInputStream("problemsolving\\Recursion\\io\\W3_1.txt"));
+			OutputStream outputStream = new DataOutputStream(new FileOutputStream("problemsolving\\Recursion\\io\\W3_1_out.txt"));
 			InputStream inputStream = System.in;
-			OutputStream outputStream = System.out;
+			//OutputStream outputStream = System.out;
 			InputReader in = new InputReader(inputStream);
 	        PrintWriter out = new PrintWriter(outputStream);
 	        new Solver().solve( in, out);
