@@ -55,10 +55,10 @@ public class BinaryStringsWithoutConsecutiveOnes {
                 a[i] = '0';
                 bswco(in, out, N, a, i + 1);
                 a[i] = '1';
-                bswco(in, out, N, a, i+1);
+                bswco(in, out, N, a, i + 1);
             } else if(a[i - 1] == '1') {
                 a[i] = '0';
-                bswco(in, out, N, a, i+1);
+                bswco(in, out, N, a, i + 1);
             }
         }
     }
