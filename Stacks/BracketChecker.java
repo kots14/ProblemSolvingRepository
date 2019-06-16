@@ -1,7 +1,21 @@
 import java.io.*;
 import java.util.*;
 
-
+//Problem:
+//--------
+// Check if the given string of brackets is balanced or not
+// Input :
+//--------
+// (){}[]
+// ((({{[[]]}})))
+// (([))
+// ()(){(})
+// Output : 
+//---------
+// true
+// true
+// false
+// false
 public class BracketChecker {
 
 	public static void main(String[] args) {
@@ -34,7 +48,7 @@ public class BracketChecker {
                     } else {
                         if((stack.peek() == '(' && x == ')')
                             || (stack.peek() == '{' && x == '}')
-                            ||(stack.peek() == '[' && x == ']'))
+                            || (stack.peek() == '[' && x == ']'))
                             stack.pop();
                         else
                             stack.push(x);  
