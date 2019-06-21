@@ -5,8 +5,9 @@ import java.util.*;
 
 public class MaxOfAllSubarraysOfSizeK {
     public static void maxOfAllSubarraysOfSizeK(int[] a, int K) {
-        int max = Integer.MIN_VALUE;
+        
         //O((N - K + 1)K) brute force
+        // int max = Integer.MIN_VALUE;
         // for(int i = 0 ; i < a.length - K + 1; i++) {
         //     max = a[i];
         //     for(int j = 1; j < K; j++) {
