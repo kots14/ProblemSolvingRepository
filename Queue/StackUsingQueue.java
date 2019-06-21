@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.Queue;
 import java.util.LinkedList;
 
+//Problem : https://www.geeksforgeeks.org/implement-stack-using-queue/
+
 public class StackUsingQueue {
     static class Stack<T> {
         Queue<T> a = null;
@@ -52,7 +54,7 @@ public class StackUsingQueue {
             s.push(i);
         }
 
-        System.out.println(s.peek());
+        System.out.println("top element of stack : "+s.peek());
         
         while(!s.isEmpty()) {
             int removed = s.pop();
