@@ -16,7 +16,7 @@ import java.util.*;
 // true
 // false
 // false
-public class BracketChecker {
+public class BalancedBracketChecker {
 
 	public static void main(String[] args) {
 		
