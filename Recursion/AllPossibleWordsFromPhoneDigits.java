@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.*;
+
 //Problem : https://www.geeksforgeeks.org/find-possible-words-phone-digits/
+
 public class AllPossibleWordsFromPhoneDigits {
     static String[] num = {"", "", "abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
     static void printAllWords(String number, int currentDigit, char[] output, int N) {
@@ -9,11 +11,11 @@ public class AllPossibleWordsFromPhoneDigits {
             return;
         }
 
-        int index = Integer.parseInt(""+number.charAt(currentDigit));
+        int index = Character.getNumericValue(number.charAt(currentDigit));
         for (int i=0; i < num[index].length(); i++) { 
             output[currentDigit] = num[index].charAt(i); 
             printAllWords(number, currentDigit + 1, output, N); 
-            int temp = Integer.parseInt(""+number.charAt(currentDigit));
+            int temp = Character.getNumericValue(number.charAt(currentDigit));
             if (temp == 0 || temp == 1) 
                 return; 
         } 
