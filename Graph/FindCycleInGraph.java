@@ -39,7 +39,7 @@ public class FindCycleInGraph {
         }
         
         for(int i = 0; i < g.N; i++) {
-            if(isDFSCycle(g, i, visited, explored))
+            if(!visited[i] && isDFSCycle(g, i, visited, explored))
                 return true;
         }
         
