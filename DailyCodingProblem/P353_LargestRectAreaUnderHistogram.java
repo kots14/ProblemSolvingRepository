@@ -19,23 +19,19 @@ public class P353_LargestRectAreaUnderHistogram {
         int maxRectAreaFromRight = Integer.MIN_VALUE;
         int maxRectAreaFromLeft = Integer.MIN_VALUE;
 
-        int minHeightSoFar = Integer.MAX_VALUE;
-        int lengthSoFar = 0;    
-        for(int i = 0; i < a.length; i++) {
-            int bar = a[i];
-            lengthSoFar += 1;
-            minHeightSoFar = Math.min(minHeightSoFar, bar);
-            maxRectAreaFromLeft = Math.max(maxRectAreaFromLeft, lengthSoFar * minHeightSoFar);
-        } 
+        int minLeftHeightSoFar = Integer.MAX_VALUE;
+        int minRightHeightSoFar = Integer.MAX_VALUE;  
 
-        lengthSoFar = 0;
-        minHeightSoFar = Integer.MAX_VALUE;
-        for(int i = a.length - 1; i >= 0; i--) {
-            int bar = a[i];
-            lengthSoFar += 1;
-            minHeightSoFar = Math.min(minHeightSoFar, bar);
-            maxRectAreaFromRight = Math.max(maxRectAreaFromRight, lengthSoFar * minHeightSoFar);
-        }    
+        for(int i = 0, j = a.length - 1, lc = 0, rc = 0; i < a.length || j > -1; i++, j--){
+            int leftBar = a[i];
+            int rightBar = a[j];
+            lc += 1;
+            minLeftHeightSoFar = Math.min(minLeftHeightSoFar, leftBar);
+            maxRectAreaFromLeft = Math.max(maxRectAreaFromLeft, lc * minLeftHeightSoFar);
+            rc += 1;
+            minRightHeightSoFar = Math.min(minRightHeightSoFar, rightBar);
+            maxRectAreaFromRight = Math.max(maxRectAreaFromRight, rc * minRightHeightSoFar);
+        }
         return (maxRectAreaFromLeft > maxRectAreaFromRight)? maxRectAreaFromLeft : maxRectAreaFromRight;
     }
     public static void main(String[] args) {
