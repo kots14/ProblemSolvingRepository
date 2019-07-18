@@ -51,15 +51,15 @@ public class DeleteGraphNodesOfDegreeK {
             dfsDelete(g, i, visited, K);
         }
     }
-    static void printGraphAfterKDeletion(Graph graph, int K) {      
-        for(int v = 0; v < graph.N; v++) {
-            if(graph.degree.get(v) < K)
+    static void printGraphAfterKDeletion(Graph g, int K) {      
+        for(int v = 0; v < g.N; v++) {
+            if(g.degree.get(v) < K)
                 continue; 
             System.out.println(v); 
-            for(Integer pCrawl: graph.list.get(v)){ 
-                if(graph.degree.get(pCrawl) < K)
-                continue; 
-                System.out.println(" -> "+pCrawl); 
+            for(Integer x: g.list.get(v)){ 
+                if(g.degree.get(x) < K)
+                    continue; 
+                System.out.println(" -> "+x); 
             } 
         } 
     }
