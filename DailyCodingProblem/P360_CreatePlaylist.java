@@ -68,16 +68,14 @@ public class P360_CreatePlaylist {
             for(int x : inp) {
                 low = Math.min(x, low);
                 high = Math.max(x, high);
-            }
-            
+            }            
         }
         
         Graph g = new Graph(high + 1);
         for(int[] inp : input) {
             for(int x = 0; x < inp.length - 1; x++) {
                 g.addEdge(inp[x], inp[x + 1]);
-            }
-            
+            }            
         }
         return g;
     }
