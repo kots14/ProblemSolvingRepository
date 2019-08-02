@@ -4,13 +4,14 @@ import java.io.*;
 import java.util.*;
 public class InterviewBitHighestProduct {
     //space : O(n)
-    //time : O(1)
+    //time : O(n) 
     private static Integer solve(ArrayList<Integer> a) {
         Integer result = Integer.MIN_VALUE;
         //taking max heap
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
-        maxHeap.addAll(a);
-
+        // maybe it takes O(n), ref : https://stackoverflow.com/questions/38324217/java-collection-addall-complexity
+        maxHeap.addAll(a); 
+        
         //finding first 3 maximum elements out of array
         if(maxHeap.size() > 0) {
             result = 1;
