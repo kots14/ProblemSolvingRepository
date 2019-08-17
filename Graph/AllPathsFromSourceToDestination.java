@@ -42,7 +42,7 @@ public class AllPathsFromSourceToDestination {
         boolean[] visited = new boolean[g.N];
         ArrayList<Integer> path = new ArrayList<>();
         
-        for(int i = 0; i < g.N; i++) visited[i] = false;
+        Arrays.fill(visited, false);
             
         path.add(source);
         dfsPathFinder(g, source, destination, visited, path);
