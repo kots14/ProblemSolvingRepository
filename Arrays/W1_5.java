@@ -23,9 +23,9 @@ public class W1_5 {
 	public static void main(String[] args) {
 		
 		try {
-			InputStream inputStream = new DataInputStream(new FileInputStream("problemsolving\\Arrays\\io\\W1_5.txt"));
-			OutputStream outputStream = new DataOutputStream(new FileOutputStream("problemsolving\\Arrays\\io\\W1_5_out.txt"));
-			//OutputStream outputStream = System.out;
+			InputStream inputStream = new DataInputStream(new FileInputStream("..\\problemsolvingrepository\\Arrays\\io\\W1_5.txt"));
+			//OutputStream outputStream = new DataOutputStream(new FileOutputStream("problemsolvingrepository\\Arrays\\io\\W1_5_out.txt"));
+			OutputStream outputStream = System.out;
 			InputReader in = new InputReader(inputStream);
 	        PrintWriter out = new PrintWriter(outputStream);
 	        new Solver().solve( in, out);
@@ -67,8 +67,7 @@ public class W1_5 {
 				while(left < N && right < N) {
 					//out.println(right - left);
 					if(aright[right] > aleft[left]) {
-						if(right - left > output)
-							output = right - left;
+						output = Math.max((right - left), output);
 						right++;
 					} else
 						left++;						
