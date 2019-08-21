@@ -26,7 +26,7 @@ public class MajorityElement {
 				
 		}
 		if(set.size() > 1)
-			return -1;
+			return Integer.MIN_VALUE;
 		return output;
 	}
 	public static void main(String[] args) {
