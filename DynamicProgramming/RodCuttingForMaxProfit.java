@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class RodCuttingForMaxProfit {
     static int cr(int[] p, int n) {
     	
