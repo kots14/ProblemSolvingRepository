@@ -24,7 +24,7 @@ public class W1_5 {
 		
 		try {
 			InputStream inputStream = new DataInputStream(new FileInputStream("..\\problemsolvingrepository\\Arrays\\io\\W1_5.txt"));
-			//OutputStream outputStream = new DataOutputStream(new FileOutputStream("problemsolvingrepository\\Arrays\\io\\W1_5_out.txt"));
+			//OutputStream outputStream = new DataOutputStream(new FileOutputStream("..\\problemsolvingrepository\\Arrays\\io\\W1_5_out.txt"));
 			OutputStream outputStream = System.out;
 			InputReader in = new InputReader(inputStream);
 	        PrintWriter out = new PrintWriter(outputStream);
