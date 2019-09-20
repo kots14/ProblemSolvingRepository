@@ -36,7 +36,8 @@ public class LongestRegularBracketSequence {
 	public static void main(String[] args) {
 		String s = "))(";
 		solve(s, s.length());
-
+		s = ")((())))(()())";
+		solve(s, s.length());
 	}
 
 }
