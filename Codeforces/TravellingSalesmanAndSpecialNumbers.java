@@ -1,16 +1,14 @@
 //https://codeforces.com/contest/914/problem/C
 public class TravellingSalesmanAndSpecialNumbers {
 	private static final int MOD = 1000000007;
-	private static int dp[] = new int[1004];
-	private static long ncr[][] = new long[1004][1004];
+	private static int dp[] = new int[1005];
+	private static long ncr[][] = new long[1005][1005];
 	
 	private static int ones(int n) {
 	  int cnt = 0;
 	  while(n > 0) {
-	    if(n%2 == 1) {
-	      cnt++;
-	    }
-	    n /= 2;
+		cnt += (n & 1); 
+	    n >>= 2;
 	  }
 	  return cnt;
 	}
@@ -21,7 +19,7 @@ public class TravellingSalesmanAndSpecialNumbers {
 	  }
 	  for(int i = 1; i <= 1000; i++) {
 	    for(int j = 1; j <= 1000; j++) {
-	      ncr[i][j] = (ncr[i-1][j-1] + ncr[i-1][j])%MOD;
+	      ncr[i][j] = (ncr[i-1][j-1] + ncr[i-1][j]) % MOD;
 	    }
 	  }
 	}
@@ -37,7 +35,7 @@ public class TravellingSalesmanAndSpecialNumbers {
 
 
 		if(k == 0){
-			System.out.printf("1\n");
+			System.out.println("1");
 			return;
 		}
 
@@ -47,11 +45,11 @@ public class TravellingSalesmanAndSpecialNumbers {
 			if(n.charAt(i) == '0')
 				continue;
 	    
-			for(int j = Math.max(nones, Integer.MAX_VALUE); j < 1000; j++) {
+			for(int j = Math.max(nones, 1); j < 1000; j++) {
 		      if(dp[j] == k-1) {
 		        ans = (ans + ncr[n.length() - i - 1][j - nones]) % MOD;
 		        if(i == 0 && k == 1)
-		          ans = (ans + MOD - 1)%MOD;
+		          ans = (ans + MOD - 1) % MOD;
 		      }
 		    }
 			nones++;
