@@ -46,7 +46,7 @@ public class TravellingSalesmanAndSpecialNumbers {
 				continue;
 	    
 			for(int j = Math.max(nones, 1); j < 1000; j++) {
-		      if(dp[j] == k-1) {
+		      if(dp[j] == k - 1) {
 		        ans = (ans + ncr[n.length() - i - 1][j - nones]) % MOD;
 		        if(i == 0 && k == 1)
 		          ans = (ans + MOD - 1) % MOD;
