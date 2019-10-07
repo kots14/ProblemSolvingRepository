@@ -21,8 +21,8 @@ public class BalancedBracketChecker {
 	public static void main(String[] args) {
 		
 		try {
-			InputStream inputStream = new DataInputStream(new FileInputStream("problemsolving\\Stacks\\io\\brackets.txt"));
-			OutputStream outputStream = new DataOutputStream(new FileOutputStream("problemsolving\\Stacks\\io\\brackets_out.txt"));
+			InputStream inputStream = new DataInputStream(new FileInputStream("..\\problemsolvingrepository\\Stacks\\io\\brackets.txt"));
+			OutputStream outputStream = new DataOutputStream(new FileOutputStream("..\\problemsolvingrepository\\Stacks\\io\\brackets_out.txt"));
 			//OutputStream outputStream = System.out;
 			InputReader in = new InputReader(inputStream);
 	        PrintWriter out = new PrintWriter(outputStream);
