@@ -15,10 +15,10 @@ public class COMPILER {
 		        char ch = s.charAt(i);
 		        temp = (ch == '<')? temp + 1 : temp - 1;
 		        
-		        if(temp<0)
+		        if(temp < 0)
 		            break;		        
 		        if(temp == 0)
-		            count  =  i+1;		       
+		            count = i+1;		       
 		    }
 		    if(temp == 0)
 	            count = s.length();
