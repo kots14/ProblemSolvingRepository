@@ -37,12 +37,16 @@ public class SpiralOrderMatrixFromNumber {
 			}
 			r++;
 			
+			//First iteration :
+			//Print (1, col) to (row, col)
 			for(int i = r; i < row; i++) {
 				a[i][col - 1] = count;
 				count++;
 			}
 			col--;
 			
+			//First iteration :
+			//Print (row, col - 1) to (row, 0)
 			if(r < row) {
 				for(int i = col - 1; i >= c; i--) {
 					a[row - 1][i] = count;
@@ -51,6 +55,8 @@ public class SpiralOrderMatrixFromNumber {
 				row--;
 			}
 			
+			//First iteration :
+			//Print (row - 1, 0) to (1, 0)
 			if(c < col) {
 				for(int i = row - 1; i >= r; i--) {
 					a[i][c] = count;
