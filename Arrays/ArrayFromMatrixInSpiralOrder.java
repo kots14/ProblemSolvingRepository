@@ -20,7 +20,7 @@
  */
 public class ArrayFromMatrixInSpiralOrder {
 	static void recSpiralPrint(int a[][], int row, int col, int r, int c) {
-		if(r >= row || c >= col) return;
+		if(r >= row || c >= col || a.length == 0) return;
 		
 		// First iteration :
 		// Print (0, 0) to (0, col)
@@ -59,6 +59,8 @@ public class ArrayFromMatrixInSpiralOrder {
 		
 	}
 	static int[] spiralPrint(int a[][]) {
+		if(a.length == 0) return new int[0];
+		
 		int r = 0, c = 0, count = 0;
 		int row = a.length;
 		int col = a[0].length;
