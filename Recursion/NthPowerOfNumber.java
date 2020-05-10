@@ -1,3 +1,4 @@
+//Problem  : https://www.geeksforgeeks.org/write-a-c-program-to-calculate-powxn/
 public class NthPowerOfNumber {
 	/**
 	 * Utility function for implementing actual logic
