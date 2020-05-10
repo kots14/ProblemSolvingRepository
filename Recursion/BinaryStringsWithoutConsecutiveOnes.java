@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-// Generate all binary strings without consecutive 1’s
+// Generate all binary strings without consecutive 1's
 // Given a integer N, print All binary string of size N.
 
 // N = 3  
