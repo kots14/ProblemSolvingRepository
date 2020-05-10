@@ -1,5 +1,13 @@
 //Problem : https://www.geeksforgeeks.org/binary-search/
 public class BinarySearchUsingRecursion {
+	/**
+	 * utility function to perform binary search in recursive fashion
+	 * @param a sorted array of integers to be searched
+	 * @param low lowest index of the array window for a recursive call
+	 * @param high last index of the array window for a recursive call
+	 * @param target search this element in the array
+	 * @return return index of the target when found, else return -1
+	 */
 	private static int binarySearch(int[] a, int low, int high, int target) {
 		if(low >= high) return -1;
 		int mid = low + (high - low) / 2;
