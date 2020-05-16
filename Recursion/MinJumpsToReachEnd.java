@@ -7,7 +7,7 @@ public class MinJumpsToReachEnd {
 	 * @return integer value indicating minimum jumps to reach the end
 	 */
 	private static int minJumps(int[] a, int low) {
-		// negative jump value will never reach end
+		// negative or zero jump value will never reach end
 		if(low == a.length - 1 || a[low] <= 0) 
 			return 0;
 				
@@ -15,7 +15,7 @@ public class MinJumpsToReachEnd {
 		
 		//for every a[i] check maximum reachability, 
 		//a particular a[i] can reach the end, so search space should be
-		//restricted within low + a[low]
+		//restricted within low + 1 and low + a[low]
 		for(int i = low + 1; i < a.length && i <= low + a[low]; i++) {
 			int jumps = minJumps(a, i);
 			//System.out.println(jumps+" "+low);
