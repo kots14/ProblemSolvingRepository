@@ -28,7 +28,7 @@ public class DfsWith2dMatrix {
 			{5, 6, 7, 8},
 			{9, 10, 11, 12}
 		};
-		dfs(a );
+		dfs(a);
 
 	}
 
