@@ -18,9 +18,13 @@ public class DfsWith2dMatrix {
 		System.out.println(a[i][j]);
 		
 		dfsUtil(a, i - 1, j, visited); //left of i,j
+		dfsUtil(a, i - 1, j - 1, visited);//top-left of i,j
 		dfsUtil(a, i + 1, j, visited); //right of i,j
+		dfsUtil(a, i + 1, j - 1, visited); //top-right of i,j
 		dfsUtil(a, i, j - 1, visited); //top of i,j
-		dfsUtil(a, i, j + 1, visited); //botoom of i,j
+		dfsUtil(a, i, j + 1, visited); //bottom of i,j
+		dfsUtil(a, i - 1, j + 1, visited); //bottom-left of i,j
+		dfsUtil(a, i + 1, j + 1, visited); //bottom-right of i,j
 	}
 	public static void main(String[] args) {
 		int[][] a = {
