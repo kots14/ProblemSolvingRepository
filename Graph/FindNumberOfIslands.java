@@ -40,6 +40,6 @@ public class FindNumberOfIslands {
                      { 0, 0, 0, 0, 0 }, 
                      { 1, 0, 1, 0, 1 } }; 
 
-        System.out.println(findNumberOfIslands(m, m.length, m.length));             
+        System.out.println(findNumberOfIslands(m, m[0].length, m.length));             
     }
 }

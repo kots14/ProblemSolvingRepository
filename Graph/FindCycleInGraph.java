@@ -34,9 +34,8 @@ public class FindCycleInGraph {
     
         //initializing the visited and explored array
         //with false
-        for(int i = 0; i < g.N; i++) {
-            visited[i] = explored[i] = false;
-        }
+        Arrays.fill(explored, false);
+        Arrays.fill(visited, false);
         
         for(int i = 0; i < g.N; i++) {
             if(!visited[i] && isDFSCycle(g, i, visited, explored))
